@@ -51,7 +51,7 @@ jobs:
         cat > manifest-ibm.yml << EOF
         ---
         applications:
-        - name: v2ws
+        - name: rya
           memory: 128M
           disk_quota: 128M
           random-route: true
@@ -68,5 +68,5 @@ jobs:
         cf_org: ${{ secrets.CF_ORG_IBM }}
         cf_space: ${{ secrets.CF_SPACE_IBM }}
         command: >
-          push v2ws -f manifest-ibm.yml
+          push rya -f manifest-ibm.yml
           
